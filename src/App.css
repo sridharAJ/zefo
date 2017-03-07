@@ -1,4 +1,7 @@
-
+.App {
+    width: 1030px;
+    margin: 0 auto;
+}
 .App-header {
   background-color: white;
   padding: 20px;

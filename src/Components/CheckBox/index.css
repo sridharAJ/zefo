@@ -1,6 +1,13 @@
 .check-box {
     display: flex;
+    padding: 3px 0;
+    font-size: 13px;
+}
+
+.check-box-element {
     cursor: pointer;
+    margin-right: 10px;
+    display: inline-block;
 }
 
 .check-box-disabled {

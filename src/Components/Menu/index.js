@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import Item from './item';
+import MenuTags from './menutags';
 import Immutable from 'immutable';
 import { updateFilter } from '../../redux/actions/category';
 import { browserHistory } from 'react-router';
@@ -31,7 +32,6 @@ class Menu extends Component {
     }
 
     handleMenuFilterChange(filter) {
-        console.log("filter", filter)
         const filterObject = this.props.filterObject.setIn(['filters', filter.value], Immutable.fromJS(filter));
         const qs = this.queryStringBuilder(filterObject);
         this.props.dispatch(updateFilter(filter));
@@ -41,17 +41,20 @@ class Menu extends Component {
     render() {
         const filters = this.props.filterObject.get('filters');
         return (
-            <div className="menu">
-                {
-                    this.props.filterList.map((item) => {
-                        const filter = filters.get(item.get('value')) ?
-                                            filters.get(item.get('value')) :
-                                            Immutable.fromJS({value: item.get('value'), items: {}});
-                        return (
-                            <Item key={item.get('value')} item={item} filter={filter} menuFilterChange={this.handleMenuFilterChange} />
-                        )
-                    })
-                }
+            <div className="menu-container">
+                <div className="menu">
+                    {
+                        this.props.filterList.map((item) => {
+                            const filter = filters.get(item.get('value')) ?
+                                                filters.get(item.get('value')) :
+                                                Immutable.fromJS({value: item.get('value'), items: {}});
+                            return (
+                                <Item key={item.get('value')} item={item} filter={filter} menuFilterChange={this.handleMenuFilterChange} />
+                            )
+                        })
+                    }
+                </div>
+                <MenuTags filterObject={this.props.filterObject} />
             </div>
         );
     }

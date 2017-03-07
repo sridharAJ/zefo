@@ -17,7 +17,7 @@ class CheckBox extends Component {
     render() {
         return (
             <div className={`check-box ${this.props.disabled ? 'check-box-disabled' : ''}`} >
-                <input type="checkbox" onChange={this.handleOnChange} value={this.props.value} checked={this.props.checked} disabled={this.props.disabled}/>{this.props.children}
+                <input className="check-box-element" type="checkbox" onChange={this.handleOnChange} value={this.props.value} checked={this.props.checked} disabled={this.props.disabled}/>{this.props.children}
             </div>
         )
     }

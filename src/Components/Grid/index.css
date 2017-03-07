@@ -1,0 +1,73 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    margin: 10px;
+}
+
+.grid-item-placeholder {
+    height: 300px;
+    position: relative;
+    background-color: #fff !important;
+}
+.grid-placeholder-animation {
+    position: relative;
+    animation-duration: 2s;
+    animation-name: placeHolderShimmer;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #fff 8%, #eee 18%, #fff 33%);
+    background-size: 800px 104px;
+}
+
+.prod-details {
+    padding: 0 10px;
+}
+
+.prod-title {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.prod-condition {
+    font-size: 11px;
+    color: #777;
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 6px;
+    line-height: 100%;
+    display: inline-block;
+    margin-top: 8px;
+}
+.prod-offer-price {
+    padding-right: 20px;
+    margin: 10px 0;
+    display: inline-block;
+    color: #DB0A5B;
+}
+.prod-price {
+    color:#999;
+    text-decoration: line-through;
+    padding-right: 20px;
+    font-size: 13px;
+}
+.prod-discount {
+    font-size: 14px;
+    color: #333;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -300px 0
+    }
+    100% {
+        background-position: 300px 0
+    }
+}

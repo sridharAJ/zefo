@@ -1,0 +1,15 @@
+.menu-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-tags-item {
+    height: 15px;
+    background-color: #eee;
+    margin-right: 10px;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #777;
+}
