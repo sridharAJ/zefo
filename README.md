@@ -1,5 +1,5 @@
-# Gefo
-Gefo category page assignment.
+# Zefo
+Zefo category page assignment.
 ### How to run!
 ```sh
   npm install
