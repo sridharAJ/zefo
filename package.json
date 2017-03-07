@@ -24,7 +24,8 @@
     "superagent": "^3.5.0"
   },
   "scripts": {
-    "start": "react-scripts start && node server.js",
+    "start": "react-scripts start",
+    "app-server": "node --harmony server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
