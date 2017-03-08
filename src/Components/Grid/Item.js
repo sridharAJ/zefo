@@ -2,6 +2,7 @@
  * Created by 12072 on 03/03/17.
  */
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazyload';
 
 class GridItem extends Component {
 
@@ -26,7 +27,9 @@ class GridItem extends Component {
             <div className="grid-item">
                 <div className={'product-img'}>
                     <a target="_blank" href={this.getProductURL(productName, productID)}>
-                        <img width="100%" alt={productName} src={product.get('imageLink')} />
+                        <LazyLoad height={200}>
+                            <img width="100%" alt={productName} src={product.get('imageLink')} />
+                        </LazyLoad>
                     </a>
                 </div>
                 <div className="prod-details">
